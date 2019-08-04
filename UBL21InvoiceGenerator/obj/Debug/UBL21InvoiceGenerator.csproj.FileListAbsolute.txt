@@ -1,0 +1,35 @@
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\UBL21InvoiceGenerator.exe.config
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\UBL21InvoiceGenerator.exe
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\UBL21InvoiceGenerator.pdb
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\Newtonsoft.Json.dll
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.csproj.CoreCompileInputs.cache
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.csproj.CopyComplete
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.exe
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.pdb
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\AppData\Productos.txt
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\AppData\invoiceTemplate.xml
+D:\VS-Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\mustache.cs.dll
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\AppData\invoiceTemplate.xml
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\AppData\Productos.txt
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\UBL21InvoiceGenerator.exe.config
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\UBL21InvoiceGenerator.exe
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\UBL21InvoiceGenerator.pdb
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\mustache.cs.dll
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\Newtonsoft.Json.dll
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.csprojAssemblyReference.cache
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.csproj.CopyComplete
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.exe
+C:\Users\Hp\Downloads\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.pdb
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\AppData\invoiceTemplate.xml
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\AppData\Productos.txt
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\UBL21InvoiceGenerator.exe.config
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\UBL21InvoiceGenerator.exe
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\UBL21InvoiceGenerator.pdb
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\mustache.cs.dll
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\bin\Newtonsoft.Json.dll
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.csprojAssemblyReference.cache
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.csproj.CoreCompileInputs.cache
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.csproj.CopyComplete
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.exe
+D:\VS Projects\UBL21InvoiceGenerator\UBL21InvoiceGenerator\obj\Debug\UBL21InvoiceGenerator.pdb

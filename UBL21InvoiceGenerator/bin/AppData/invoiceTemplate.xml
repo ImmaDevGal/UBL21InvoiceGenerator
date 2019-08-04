@@ -1,0 +1,9 @@
+<Factura>
+  <Detalle>
+    {{#itemsData}}
+    <Linea Posicion="{{itemNumber}}" Cantidad="{{itemQuantity}}" PrecioUnitario="{{priceAmount}}" SubTotalLinea="{{totalNetAmount}}" ValorTotalItem="{{totalAmount}}" UnidadMedida="MT" Descripcion="{{itemDescription}}">
+    </Linea>
+    {{/itemsData}}
+  </Detalle>
+  <Totales Bruto="{{totalNetAmount}}" Base="{{totalNetAmount}}" Impuestos="{{taxPercentageAmount}}" Descuentos="0" Retenciones="0" Cargos="0" General="{{totalAmount}}" Anticipo="0" />
+</Factura>

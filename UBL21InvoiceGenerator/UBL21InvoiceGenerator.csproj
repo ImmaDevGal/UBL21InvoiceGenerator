@@ -52,17 +52,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Discount.cs" />
-    <Compile Include="Charge.cs" />
-    <Compile Include="Document.cs" />
+    <Compile Include="AbstractDocument.cs" />
     <Compile Include="DocumentData.cs" />
+    <Compile Include="GenericDocument.cs" />
+    <Compile Include="IDocument.cs" />
     <Compile Include="ItemData.cs" />
     <Compile Include="DocumentGenerator.cs" />
-    <Compile Include="Line.cs" />
+    <Compile Include="Model\Charge.cs" />
+    <Compile Include="Model\Discount.cs" />
+    <Compile Include="Model\Line.cs" />
+    <Compile Include="Model\Tax.cs" />
+    <Compile Include="Model\Total.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tax.cs" />
-    <Compile Include="Total.cs" />
     <Compile Include="WithholdingTax.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +79,9 @@
     <Content Include="AppData\invoiceTemplate.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

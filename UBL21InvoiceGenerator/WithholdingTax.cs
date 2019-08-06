@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UBL21InvoiceGenerator
 {
-    class WithholdingTax
+    public class WithholdingTax
     {
         Decimal taxAmount { get; set; }
         Decimal taxableAmpunt { get; set; }
@@ -14,5 +14,10 @@ namespace UBL21InvoiceGenerator
         String taxSchemeId { get; set; }
         String taxScgemeName { get; set; }
 
+    }
+
+    public class WithholdingTaxes
+    {
+        public List<WithholdingTax> WithholdingTax { get; set; }
     }
 }

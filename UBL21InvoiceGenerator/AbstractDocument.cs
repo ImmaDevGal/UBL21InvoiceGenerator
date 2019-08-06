@@ -10,15 +10,16 @@ namespace UBL21InvoiceGenerator
     public abstract class AbstractDocument
     {
         public String DocumentType { get; set; }
-        public Taxes Taxes { get; set; }
-        public WithholdingTaxes WithholdingTaxes { get; set; }
-        public Lines Lines { get; set; }
+        public List<Tax> Taxes { get; set; }
+        public List<WithholdingTax> WithholdingTaxes { get; set; }
+        public List<Line> Lines { get; set; }
         public Total Total { get; set; }
         public Random random { get; set; }
 
         public AbstractDocument()
         {
             random = new Random(Environment.TickCount);
+            
         }
 
     }

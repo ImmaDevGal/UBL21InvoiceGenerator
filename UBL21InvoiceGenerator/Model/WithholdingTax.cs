@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UBL21InvoiceGenerator
+namespace UBL21InvoiceGenerator.Model
 {
     public class WithholdingTax
     {
@@ -14,10 +14,5 @@ namespace UBL21InvoiceGenerator
         String taxSchemeId { get; set; }
         String taxScgemeName { get; set; }
 
-    }
-
-    public class WithholdingTaxes
-    {
-        public List<WithholdingTax> WithholdingTax { get; set; }
     }
 }

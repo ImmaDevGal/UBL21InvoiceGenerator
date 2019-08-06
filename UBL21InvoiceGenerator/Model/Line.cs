@@ -18,20 +18,9 @@ namespace UBL21InvoiceGenerator.Model
             }
         }
 
-        public Decimal Quantity
-        {
-            get
-            {
-                return random.Next(1, 100);
-            }
-        }
+        public Decimal Quantity { private set; get; }
 
-        public Decimal Price {
-            get
-            {
-                return random.Next(10000, 900000);
-            }
-        }
+        public Decimal Price {private set; get;}
 
         public Decimal Amount {
             get
@@ -50,6 +39,18 @@ namespace UBL21InvoiceGenerator.Model
             this.Id = id;
             random = new Random(Environment.TickCount);
             productNames = File.ReadAllLines(@"AppData\Productos.txt");
+            Price = GetPrice();
+            Quantity = GetQuantity();
+        }
+
+        public Decimal GetPrice()
+        {
+            return random.Next(10000, 900000);
+        }
+
+        public Decimal GetQuantity()
+        {
+            return random.Next(1, 100);
         }
 
         public Decimal GetTotalSubTotalAmount()
@@ -64,11 +65,6 @@ namespace UBL21InvoiceGenerator.Model
             return (Price * Quantity) + Tax.TaxAmount;
         }
         
-    }
-
-    public class Lines
-    {
-        public List<Line> Line { get; set; }
     }
 
 }

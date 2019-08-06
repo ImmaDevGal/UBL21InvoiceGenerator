@@ -54,6 +54,8 @@
   <ItemGroup>
     <Compile Include="AbstractDocument.cs" />
     <Compile Include="DocumentData.cs" />
+    <Compile Include="DocumentBuilder.cs" />
+    <Compile Include="Enums\DocumentToBuildEnum.cs" />
     <Compile Include="GenericDocument.cs" />
     <Compile Include="IDocument.cs" />
     <Compile Include="ItemData.cs" />
@@ -65,7 +67,7 @@
     <Compile Include="Model\Total.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WithholdingTax.cs" />
+    <Compile Include="Model\WithholdingTax.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -80,8 +82,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

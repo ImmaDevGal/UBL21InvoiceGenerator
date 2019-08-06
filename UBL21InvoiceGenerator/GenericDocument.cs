@@ -9,23 +9,22 @@ namespace UBL21InvoiceGenerator
 {
     public class GenericDocument : AbstractDocument, IDocument
     {
-
-        GenericDocument()
-        {
-            Lines = GetLines();
-        }
-
         public void GenerateDocument()
         {
-
+            Lines = new List<Line>();
+            Total = new Total();
+            Lines = GetLines();
             Total = GetTotal();
+
+            Console.WriteLine("Primera linea :" + Lines.FirstOrDefault());
+            Console.WriteLine("Total :" + Total.PayableAmount);
         }
 
         //Get Tax
         void GetTaxes()
         {
             
-            var lineWithTax = Lines.Line.Where(t => t.Tax.TaxAmount > 0);
+            var lineWithTax = Lines.Where(t => t.Tax.TaxAmount > 0);
             //if(lineWithTax != null)
             //{
             //    foreach(Line line in Lines.Line)
@@ -36,16 +35,16 @@ namespace UBL21InvoiceGenerator
             //    }
             //}
             
-            var something = Lines.Line.Where(line => line.Tax != null).Select(line => line.Tax);
+            var something = Lines.Where(line => line.Tax != null).Select(line => line.Tax);
         }
 
         //Get Lines
-        Lines GetLines(){
+        List<Line> GetLines(){
             
             int numberOfLines = random.Next(1, 5);
             for (int i = 1; i <= numberOfLines; i++)
             {
-                Lines.Line.Add(new Line(i));
+                Lines.Add(new Line(i));
             }
             return Lines;
         }
@@ -53,7 +52,7 @@ namespace UBL21InvoiceGenerator
        //Set Total
        Total GetTotal()
         {   
-            foreach (Line Line in Lines.Line)
+            foreach (Line Line in Lines)
             {
                 Total.LineExtensionAmount += Line.Amount;
                 Total.TaxExclusiveAmount += Line.Amount;

@@ -9,18 +9,12 @@ namespace UBL21InvoiceGenerator
     {
         static void Main(string[] args)
         {
-            DocumentGenerator documentGenerator = new DocumentGenerator();
+            DocumentBuilder documentBuilder = new DocumentBuilder();
+            IDocument document = documentBuilder.BuildDocument();
+            document.GenerateDocument();
 
-            List<DocumentData> documents = documentGenerator.GetDocumentData();
-
-            var myTemplate = CreateMainFile();
-
-            foreach (var document in documents)
-            {
-                var hi = Mustache.cs.Mustache.render(myTemplate, document);
-                Console.WriteLine(hi.ToString());
-            }
             Console.ReadLine();
+            
         }
 
         private static string CreateMainFile()

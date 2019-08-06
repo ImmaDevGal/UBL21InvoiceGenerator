@@ -22,8 +22,4 @@ namespace UBL21InvoiceGenerator.Model
 
     }
 
-    public class Taxes
-    {
-        public List<Tax> Tax { get; set; }
-    }
 }

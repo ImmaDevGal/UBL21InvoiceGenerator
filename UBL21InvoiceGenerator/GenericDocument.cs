@@ -7,7 +7,7 @@ using UBL21InvoiceGenerator.Model;
 
 namespace UBL21InvoiceGenerator
 {
-    public class GenericDocument : AbstractDocument, IDocument
+    public class GenericDocument : AbstractDocument
     {
         public void GenerateDocument()
         {

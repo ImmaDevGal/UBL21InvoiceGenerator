@@ -9,9 +9,9 @@ namespace UBL21InvoiceGenerator
 {
     public class DocumentBuilder
     {
-        public IDocument BuildDocument(DocumentToBuildEnum? documentToBuild = null)
+        public AbstractDocument BuildDocument(DocumentToBuildEnum? documentToBuild = null)
         {
-            IDocument document = null;
+            AbstractDocument document = null;
 
             switch (documentToBuild)
             {

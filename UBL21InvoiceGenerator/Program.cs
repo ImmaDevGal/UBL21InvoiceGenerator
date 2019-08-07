@@ -10,7 +10,7 @@ namespace UBL21InvoiceGenerator
         static void Main(string[] args)
         {
             DocumentBuilder documentBuilder = new DocumentBuilder();
-            IDocument document = documentBuilder.BuildDocument();
+            AbstractDocument document = documentBuilder.BuildDocument();
             document.GenerateDocument();
 
             Console.ReadLine();

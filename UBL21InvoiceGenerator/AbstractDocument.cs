@@ -7,7 +7,7 @@ using UBL21InvoiceGenerator.Model;
 
 namespace UBL21InvoiceGenerator
 {
-    public abstract class AbstractDocument
+    public abstract class AbstractDocument : IDocument
     {
         public String DocumentType { get; set; }
         public List<Tax> Taxes { get; set; }
@@ -22,5 +22,9 @@ namespace UBL21InvoiceGenerator
             
         }
 
+        public void GenerateDocument()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

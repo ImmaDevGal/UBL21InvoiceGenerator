@@ -7,40 +7,43 @@ using System.Threading.Tasks;
 
 namespace UBL21InvoiceGenerator.Model
 {
-    public class Line
+    public class Line : BaseUtilities
     {
-        Int32 Id { get; set; }
+        public Int32 Id { get; set; }
 
-        public String Description {
-            get
-            {
-                return productNames[random.Next(0, productNames.Length)];
-            }
-        }
+        public String Description { get; set; }
 
-        public Decimal Quantity { private set; get; }
+        public Decimal Quantity { get; set; }
 
-        public Decimal Price {private set; get;}
+        public Decimal Price { get; set; }
 
-        public Decimal Amount {
-            get
-            {
-               return (Price * Quantity);
-            }
-        }
+        public Decimal Amount { get; set; }
 
-        public Tax Tax;
+        public Tax Tax { get; set; }
         public WithholdingTax WithholdingTax;
         private string[] productNames;
-        private Random random;
+        
 
+        public Line() { }
         public Line(Int32 id)
         {
             this.Id = id;
-            random = new Random(Environment.TickCount);
             productNames = File.ReadAllLines(@"AppData\Productos.txt");
+            SetUpLine();
+        }
+
+        public void SetUpLine()
+        {
+            Description = GetDescription();
             Price = GetPrice();
             Quantity = GetQuantity();
+            Amount = GetAmount();
+            Tax = GetTax(); 
+        }
+
+        public string GetDescription()
+        {
+            return productNames[random.Next(0, productNames.Length)];
         }
 
         public Decimal GetPrice()
@@ -53,9 +56,14 @@ namespace UBL21InvoiceGenerator.Model
             return random.Next(1, 100);
         }
 
-        public Decimal GetTotalSubTotalAmount()
+        public Decimal GetAmount()
         {
             return (Price * Quantity);
+        }
+
+        public Tax GetTax()
+        {
+            return new Tax(Amount);
         }
 
         public Decimal GetTotalAmount()
@@ -64,7 +72,7 @@ namespace UBL21InvoiceGenerator.Model
             WithholdingTax = new WithholdingTax();
             return (Price * Quantity) + Tax.TaxAmount;
         }
-        
+
     }
 
 }

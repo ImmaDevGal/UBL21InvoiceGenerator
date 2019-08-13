@@ -4,43 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UBL21InvoiceGenerator.Model;
+using UBL21InvoiceGenerator.UBL21InvoiceGenerator;
 
 namespace UBL21InvoiceGenerator
 {
     public class GenericDocument : AbstractDocument
     {
-        public void GenerateDocument()
+        public override void GenerateDocument()
         {
             Lines = new List<Line>();
             Total = new Total();
             Lines = GetLines();
             Total = GetTotal();
+            Taxes = GetTaxes();
 
-            Console.WriteLine("Primera linea :" + Lines.FirstOrDefault());
+            Console.WriteLine("Id Primera linea :" + Lines.FirstOrDefault().Id);
             Console.WriteLine("Total :" + Total.PayableAmount);
         }
 
         //Get Tax
-        void GetTaxes()
+        public List<Tax> GetTaxes()
         {
-            
+            List<Tax> taxes = new List<Tax>();
             var lineWithTax = Lines.Where(t => t.Tax.TaxAmount > 0);
-            //if(lineWithTax != null)
-            //{
-            //    foreach(Line line in Lines.Line)
-            //    {
-            //        var documentTax = new Tax();
-            //        //documentTax = Lines.Line.Tax;
-            //        Taxes.Tax.Add(documentTax);
-            //    }
-            //}
-            
-            var something = Lines.Where(line => line.Tax != null).Select(line => line.Tax);
+            taxes = Lines?.Where(line => line.Tax != null)?.Select(line => line.Tax)?.ToList();
+            return taxes;
         }
 
-        //Get Lines
-        List<Line> GetLines(){
-            
+        List<Line> GetLines()
+        {
+
             int numberOfLines = random.Next(1, 5);
             for (int i = 1; i <= numberOfLines; i++)
             {
@@ -48,10 +41,8 @@ namespace UBL21InvoiceGenerator
             }
             return Lines;
         }
-
-       //Set Total
-       Total GetTotal()
-        {   
+        Total GetTotal()
+        {
             foreach (Line Line in Lines)
             {
                 Total.LineExtensionAmount += Line.Amount;
@@ -61,6 +52,6 @@ namespace UBL21InvoiceGenerator
             }
             return Total;
         }
-        
+
     }
 }

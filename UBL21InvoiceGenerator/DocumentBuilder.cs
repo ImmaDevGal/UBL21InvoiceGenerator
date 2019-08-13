@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UBL21InvoiceGenerator.Enums;
+using UBL21InvoiceGenerator.UBL21InvoiceGenerator;
 
 namespace UBL21InvoiceGenerator
 {

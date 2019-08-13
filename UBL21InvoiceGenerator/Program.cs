@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Xml;
+using UBL21InvoiceGenerator.UBL21InvoiceGenerator;
 
 namespace UBL21InvoiceGenerator
 {
@@ -9,22 +10,12 @@ namespace UBL21InvoiceGenerator
     {
         static void Main(string[] args)
         {
-            DocumentBuilder documentBuilder = new DocumentBuilder();
-            AbstractDocument document = documentBuilder.BuildDocument();
-            document.GenerateDocument();
+            DocumentParser documentParser = new DocumentParser();
 
             Console.ReadLine();
-            
         }
 
-        private static string CreateMainFile()
-        {
-            var path = ConfigurationManager.AppSettings["XmlPath"];
-            //var content = System.IO.File.ReadAllBytes(path);
-            XmlDocument doc = new XmlDocument();
-            doc.Load(path);
-            string xmlcontents = doc.InnerXml;
-            return xmlcontents;
-        }
+
+
     }
 }

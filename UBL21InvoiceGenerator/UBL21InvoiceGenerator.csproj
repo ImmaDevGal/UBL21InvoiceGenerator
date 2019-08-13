@@ -53,13 +53,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractDocument.cs" />
-    <Compile Include="DocumentData.cs" />
     <Compile Include="DocumentBuilder.cs" />
+    <Compile Include="DocumentData.cs" />
+    <Compile Include="DocumentParser.cs" />
     <Compile Include="Enums\DocumentToBuildEnum.cs" />
     <Compile Include="GenericDocument.cs" />
     <Compile Include="IDocument.cs" />
     <Compile Include="ItemData.cs" />
     <Compile Include="DocumentGenerator.cs" />
+    <Compile Include="Model\BaseUtilities.cs" />
     <Compile Include="Model\Charge.cs" />
     <Compile Include="Model\Discount.cs" />
     <Compile Include="Model\Line.cs" />
@@ -78,6 +80,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppData\testTemplate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="AppData\invoiceTemplate.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

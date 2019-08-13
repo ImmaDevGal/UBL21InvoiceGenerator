@@ -7,24 +7,24 @@ using UBL21InvoiceGenerator.Model;
 
 namespace UBL21InvoiceGenerator
 {
-    public abstract class AbstractDocument : IDocument
+    namespace UBL21InvoiceGenerator
     {
-        public String DocumentType { get; set; }
-        public List<Tax> Taxes { get; set; }
-        public List<WithholdingTax> WithholdingTaxes { get; set; }
-        public List<Line> Lines { get; set; }
-        public Total Total { get; set; }
-        public Random random { get; set; }
-
-        public AbstractDocument()
+        public abstract class AbstractDocument
         {
-            random = new Random(Environment.TickCount);
-            
-        }
+            public String DocumentType { get; set; }
+            public List<Tax> Taxes { get; set; }
+            public List<WithholdingTax> WithholdingTaxes { get; set; }
+            public List<Line> Lines { get; set; }
+            public Total Total { get; set; }
+            public Random random { get; set; }
 
-        public void GenerateDocument()
-        {
-            throw new NotImplementedException();
+            public AbstractDocument()
+            {
+                random = new Random(Environment.TickCount);
+
+            }
+
+            public abstract void GenerateDocument();
         }
     }
 }
